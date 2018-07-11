@@ -47,8 +47,9 @@ setTimeout(function () {
   })
 }, 3000)
 
+var md = document.getElementById('video2')
+
 function playVideo(videoId) {
-  var md = document.getElementById('video2')
   if (videoId == 1) { //拒绝Tom
     $('.special').hide();
     md.onplay = function () {
@@ -61,14 +62,15 @@ function playVideo(videoId) {
     $("#video2").attr("src", url);
     md.play();
     // 判断是否播放结束
-    md.addEventListener('ended', function () {
-      console.log('第一个视频播放结束')
-      $(".one").hide();
-      $('.special').hide();
-      $(".three").hide();
-      $(".two").hide();
-      $(".four").fadeIn(500);
-    })
+    md.onended =
+      function () {
+        console.log('第一个视频播放结束')
+        $(".one").hide();
+        $('.special').hide();
+        $(".three").hide();
+        $(".two").hide();
+        $(".four").fadeIn(500);
+      }
   }
   if (videoId == 2) {
     $('.special').hide();
@@ -82,7 +84,7 @@ function playVideo(videoId) {
     $("#video2").attr("src", url);
     md.play();
     // 判断是否播放结束
-    md.addEventListener('ended', function () {
+    md.onended = function () {
       console.log('第二个视频播放结束')
       $(".one").hide();
       $(".two").hide();
@@ -91,7 +93,7 @@ function playVideo(videoId) {
       md.addEventListener('ended', function () {
         $('.five').fadeIn(500)
       })
-    })
+    }
   }
   if (videoId == 3) { //飞身上台拥吻
     md.onplay = function () {
@@ -104,7 +106,7 @@ function playVideo(videoId) {
     $("#video2").attr("src", url);
 
     // 判断是否播放结束
-    md.addEventListener('ended', function () {
+    md.onended = function () {
       console.log('第三屏播放结束，第五屏显示');
       $(".one").hide();
       $(".two").hide();
@@ -119,7 +121,7 @@ function playVideo(videoId) {
       //   $(".hmq").hide();
       //   $('.five').fadeIn(500);
       // })
-    })
+    }
     md.play();
   }
   if (videoId == 4) { //原地不动，送上祝福
@@ -133,13 +135,13 @@ function playVideo(videoId) {
     $("#video2").attr("src", url);
     md.play();
     // 判断是否播放结束
-    md.addEventListener('ended', function () {
+    md.onended = function () {
       console.log('第四个视频播放结束')
       $(".one").hide();
       $(".two").hide();
       $(".three").hide();
       $(".four").fadeIn(500);
-    })
+    }
   }
 }
 
