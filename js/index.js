@@ -32,8 +32,11 @@ setTimeout(function () {
     $('.special').fadeIn(500);
     // 判断是否播放结束
     var mds = document.getElementById('video-s')
-    mds.onplaying = function () {
-      $('.one').hide();
+    mds.onplay = function () {
+      console.log('开始播放第一个视频');
+      setTimeout(() => {
+        $('.one').hide();
+      }, 1000);
     }
     mds.play();
     mds.addEventListener('ended', function () {
@@ -48,8 +51,10 @@ function playVideo(videoId) {
   var md = document.getElementById('video2')
   if (videoId == 1) { //拒绝Tom
     $('.special').hide();
-    md.onplaying = function () {
-      $(".two").hide(); //第二屏隐藏
+    md.onplay = function () {
+      setTimeout(() => {
+        $(".two").hide(); //第二屏隐藏
+      }, 1000);
     }
     $(".three").show(); //第三屏视频显示
     var url = "mp3/video2.m4v";
@@ -57,6 +62,7 @@ function playVideo(videoId) {
     md.play();
     // 判断是否播放结束
     md.addEventListener('ended', function () {
+      console.log('第一个视频播放结束')
       $(".one").hide();
       $('.special').hide();
       $(".three").hide();
@@ -66,8 +72,10 @@ function playVideo(videoId) {
   }
   if (videoId == 2) {
     $('.special').hide();
-    md.onplaying = function () {
-      $(".two").hide(); //第二屏隐藏
+    md.onplay = function () {
+      setTimeout(() => {
+        $(".two").hide(); //第二屏隐藏
+      }, 1000);
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video3.m4v";
@@ -75,6 +83,7 @@ function playVideo(videoId) {
     md.play();
     // 判断是否播放结束
     md.addEventListener('ended', function () {
+      console.log('第二个视频播放结束')
       $(".one").hide();
       $(".two").hide();
       $(".three").hide();
@@ -85,33 +94,39 @@ function playVideo(videoId) {
     })
   }
   if (videoId == 3) { //飞身上台拥吻
-    md.onplaying = function () {
-      $(".four").hide(); //第四屏隐藏
+    md.onplay = function () {
+      setTimeout(() => {
+        $(".four").hide(); //第四屏隐藏
+      }, 1000);
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video4.m4v";
     $("#video2").attr("src", url);
-    md.play();
+
     // 判断是否播放结束
     md.addEventListener('ended', function () {
+      console.log('第三屏播放结束，第五屏显示');
       $(".one").hide();
       $(".two").hide();
       $(".three").hide();
       $(".four").hide();
-      $(".five").hide();
-      $(".hmq").fadeIn(500);
-      var mdlast = document.getElementById("video-h")
-      mdlast.play();
-      mdlast.addEventListener('ended', function () {
-        $(".four").hide();
-        $(".hmq").hide();
-        $('.five').fadeIn(500);
-      })
+      $(".five").show();
+      // $(".hmq").fadeIn(500);
+      // var mdlast = document.getElementById("video-h")
+      // mdlast.play();
+      // mdlast.addEventListener('ended', function () {
+      //   $(".four").hide();
+      //   $(".hmq").hide();
+      //   $('.five').fadeIn(500);
+      // })
     })
+    md.play();
   }
   if (videoId == 4) { //原地不动，送上祝福
-    md.onplaying = function () {
-      $(".four").hide(); //第四屏隐藏
+    md.onplay = function () {
+      setTimeout(() => {
+        $(".four").hide(); //第四屏隐藏
+      }, 1000);
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video5.m4v";
@@ -119,6 +134,7 @@ function playVideo(videoId) {
     md.play();
     // 判断是否播放结束
     md.addEventListener('ended', function () {
+      console.log('第四个视频播放结束')
       $(".one").hide();
       $(".two").hide();
       $(".three").hide();
