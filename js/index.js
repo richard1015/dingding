@@ -33,9 +33,7 @@ setTimeout(function () {
     // 判断是否播放结束
     var mds = document.getElementById('video-s')
     mds.oncanplaythrough = function () {
-      setTimeout(() => {
-        $('.one').hide();
-      }, 1000);
+      $('.one').hide();
     }
     mds.play();
     mds.addEventListener('ended', function () {
@@ -51,9 +49,7 @@ function playVideo(videoId) {
   if (videoId == 1) { //拒绝Tom
     $('.special').hide();
     md.oncanplaythrough = function () {
-      setTimeout(() => {
-        $(".two").hide(); //第二屏隐藏
-      }, 1000);
+      $(".two").hide(); //第二屏隐藏
     }
     $(".three").show(); //第三屏视频显示
     var url = "mp3/video2.m4v";
@@ -71,9 +67,7 @@ function playVideo(videoId) {
   if (videoId == 2) {
     $('.special').hide();
     md.oncanplaythrough = function () {
-      setTimeout(() => {
-        $(".two").hide(); //第二屏隐藏
-      }, 1000);
+      $(".two").hide(); //第二屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video3.m4v";
@@ -92,9 +86,7 @@ function playVideo(videoId) {
   }
   if (videoId == 3) { //飞身上台拥吻
     md.oncanplaythrough = function () {
-      setTimeout(() => {
-        $(".four").hide(); //第四屏隐藏
-      }, 1000);
+      $(".four").hide(); //第四屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video4.m4v";
@@ -119,9 +111,7 @@ function playVideo(videoId) {
   }
   if (videoId == 4) { //原地不动，送上祝福
     md.oncanplaythrough = function () {
-      setTimeout(() => {
-        $(".four").hide(); //第四屏隐藏
-      }, 1000);
+      $(".four").hide(); //第四屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
     var url = "mp3/video5.m4v";
