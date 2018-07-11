@@ -32,7 +32,7 @@ setTimeout(function () {
     $('.special').fadeIn(500);
     // 判断是否播放结束
     var mds = document.getElementById('video-s')
-    mds.oncanplaythrough = function () {
+    mds.canplay = function () {
       $('.one').hide();
     }
     mds.play();
@@ -48,7 +48,7 @@ function playVideo(videoId) {
   var md = document.getElementById('video2')
   if (videoId == 1) { //拒绝Tom
     $('.special').hide();
-    md.oncanplaythrough = function () {
+    md.canplay = function () {
       $(".two").hide(); //第二屏隐藏
     }
     $(".three").show(); //第三屏视频显示
@@ -66,7 +66,7 @@ function playVideo(videoId) {
   }
   if (videoId == 2) {
     $('.special').hide();
-    md.oncanplaythrough = function () {
+    md.canplay = function () {
       $(".two").hide(); //第二屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
@@ -85,7 +85,7 @@ function playVideo(videoId) {
     })
   }
   if (videoId == 3) { //飞身上台拥吻
-    md.oncanplaythrough = function () {
+    md.canplay = function () {
       $(".four").hide(); //第四屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
@@ -110,7 +110,7 @@ function playVideo(videoId) {
     })
   }
   if (videoId == 4) { //原地不动，送上祝福
-    md.oncanplaythrough = function () {
+    md.canplay = function () {
       $(".four").hide(); //第四屏隐藏
     }
     $(".three").fadeIn(500); //第三屏视频显示
