@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <title>美团</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script src="./lib/rem.js"></script>
+  <script src="./lib/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+  <img src="imgs/icon_voice_on.png" class="music on" id="voice-on">
+  <img src="imgs/icon_voice_off.png" class="music off" id="voice-off">
+
+  <div class="one">
+    <div class="bg"></div>
+    <div class="opacity">
+      <img src="imgs/plane.png" alt="" class="plane">
+      <div class="pro-bg">
+        <div class="barline">
+          <div w="100" style="width:0px;" class="charts"></div>
+          <img src="imgs/icon-left.png" alt="" class="icon-left">
+          <img src="imgs/icon-right.png" alt="" class="icon-right">
+          <p class="arrive">Arriving</p>
+        </div>
+      </div>
+      <img src="imgs/hand.png" class="hand">
+    </div>
+  </div>
+  <div class="special">
+    <video src="mp3/video1.m4v" webkit-playsinline='true' playsinline='true' id="video-s" x-webkit-airplay="allow" x5-video-player-type="h5"
+      x5-video-player-fullscreen="false" x5-video-orientation="portraint" style="object-fit:fill" preload="auto"></video>
+  </div>
+  <!-- 第二屏 是否出席婚礼 -->
+  <div class="two">
+    <div class="bg"></div>
+    <div class="opacity">
+      <div class="selection">
+        <div class="refuse" onclick="playVideo(1);">
+        </div>
+        <div class="agree" onclick="playVideo(2);">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 第三屏视频 -->
+  <div class="three">
+    <video src="" id="video2" webkit-playsinline='true' playsinline='true' x-webkit-airplay="allow" x5-video-player-type="h5"
+      x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill" preload="auto"></video>
+  </div>
+  <!-- 第四屏 现在怎么办 -->
+  <div class="four">
+    <div class="bg"></div>
+    <div class="opacity">
+      <div class="selection">
+        <div class="kiss" onclick="playVideo(3);">
+        </div>
+        <div class="stand" onclick="playVideo(4);">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hmq">
+    <video src="mp3/hmq.m4v" webkit-playsinline='true' playsinline='true' id="video-h" x-webkit-airplay="allow" x5-video-player-type="h5"
+      x5-video-player-fullscreen="true" x5-video-orientation="portraint" style="object-fit:fill" preload="auto"></video>
+  </div>
+  <!-- 第五屏幕 -->
+  <div class="five">
+    <div class="gotoTicket">
+    </div>
+    <div class="share">
+    </div>
+    <div class="share-opa"></div>
+  </div>
+
+
+  <!-- 必须加在微信api资源
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+  <script src="js/index.js?tid=aasd>"></script>
+</body>
+
+</html>

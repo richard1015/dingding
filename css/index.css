@@ -1,0 +1,316 @@
+body{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+.music {
+  position: fixed;
+  top: .55rem;
+  left: 6.48rem;
+  width: .54rem;
+  height: .54rem;
+  z-index: 2;
+}
+
+.music.off {
+  display: none;
+}
+.one {
+  width: 100%;
+  height: 100%;
+  /* display:none; */
+}
+
+.one .bg {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/one-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.one .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+}
+.one .bg-music {
+  position: fixed;
+  right:.2rem;
+  top:2rem;
+  opacity: 0.5;
+}
+
+.one .plane {
+  width: 4.26rem;
+  width: 4.28rem;
+  margin-left: 1.52rem;
+  margin-top: 4.86rem;
+}
+
+.one .pro-bg {
+  width: 4.74rem;
+  height: 1.36rem;
+  margin-top: .4rem;
+  margin-left: 1.22rem;
+  background: url(../imgs/btn_arriving.png) no-repeat;
+  background-size: contain;
+}
+
+.one .barline {
+  position: relative;
+  width: 4.64rem;
+  height: 1.02rem;
+  padding-top:.1rem;
+  padding-left:.1rem;
+}
+
+.one .barline .charts {
+  height: 1.02rem;
+  overflow: hidden;
+  background : #EF4E4B;
+  border-radius: .3rem;
+}
+
+.one .barline .icon-left {
+  position: absolute;
+  left: .24rem;
+  top: .16rem;
+  height: .87rem;
+}
+
+.one .barline .icon-right {
+  position: absolute;
+  right: .24rem;
+  top: .16rem;
+  height: .87rem;
+}
+.one .barline .arrive {
+   position: absolute;
+   left: 1.4rem;
+   top: .16rem;
+  font-size: .6rem;
+  color:#fff;
+}
+
+.one .hand {
+  position: fixed;
+  top:6.8rem;
+  left:5.62rem;
+  opacity:0;
+  margin: 0 auto;
+  width: .6rem;
+  height: .5rem;
+  -webkit-animation-name: 'ripple';
+  -webkit-animation-duration: .6s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes ripple {
+  0% {
+    margin-left: .15rem;
+    margin-top: .15rem;
+    width: 18px;
+    height:16px;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 0;
+    margin-top: 0;
+    width: 30px;
+    height:28px;
+    opacity: 1;
+  }
+}
+/* @-webkit-keyframes ripple {
+  0% {
+    margin-left: .15rem;
+    margin-top: .15rem;
+    width: .4rem;
+    height: .34rem;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 0;
+    margin-top: 0;
+    width: .7rem;
+    height: .6rem;
+    opacity: 1;
+  }
+} */
+
+.special{
+  width:100%;
+  height:100%;
+  display: none;
+}
+.special #video-s{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center center;
+  
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+::-webkit-media-controls {
+  display: none !important;
+}
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.two {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.two .bg {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/one-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.two .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.two .selection{
+  position: relative;
+  height:8.4rem;
+  width:6.54rem;
+  margin-top:1.26rem;
+  margin-left:.5rem;
+  background: url(../imgs/bg_1.png) no-repeat;
+  background-size: contain;
+}
+.two .selection .refuse{
+  position: absolute;
+  left:1.14rem;
+  top:3.55rem;
+  width:4.27rem;
+  height:1.2rem;
+}
+.two .selection .agree {
+  position: absolute;
+  left: 1.14rem;
+  top: 5.57rem;
+  width: 4.27rem;
+  height: 1.2rem;
+}
+
+.three{
+  width:100%;
+  height:100%;
+  display: none;
+}
+.three #video2 {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.four {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.four .bg {
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/three-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.four .opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.four .selection {
+  position: relative;
+  height: 8.4rem;
+  width: 6.54rem;
+  margin-top: 1.26rem;
+  margin-left: .5rem;
+  background: url(../imgs/bg_2.png) no-repeat;
+  background-size: contain;
+}
+
+.four .selection .kiss {
+  position: absolute;
+  left: .6rem;
+  top: 3.55rem;
+  width: 5.32rem;
+  height: 1.2rem;
+}
+
+.four .selection .stand {
+  position: absolute;
+  left: .6rem;
+  top: 5.57rem;
+  width: 5.32rem;
+  height: 1.2rem;
+}
+
+.five {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../imgs/mtbg.jpg) no-repeat;
+  background-size: cover;
+  display: none;
+}
+.five .gotoTicket {
+  position: absolute;
+  left:2.1rem;
+  top:4.7rem;
+  width:4rem;
+  height:1.43rem;
+}
+.five .share {
+  position: absolute;
+  left: 2.1rem;
+  top: 7rem;
+  width: 4rem;
+  height: 1.43rem;
+}
+.five .share-opa{
+  display:none;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background:url(../imgs/bg-share.jpg) no-repeat;
+  background-size: cover;
+}
+.hmq{
+  width:100%;
+  height:100%;
+  display: none;  
+}
+.hmq #video-h {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
