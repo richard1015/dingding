@@ -32,8 +32,7 @@ setTimeout(function () {
     $('.special').fadeIn(500);
     // 判断是否播放结束
     var mds = document.getElementById('video-s')
-    mds.onplay = function () {
-      console.log('开始播放第一个视频');
+    mds.oncanplaythrough = function () {
       setTimeout(() => {
         $('.one').hide();
       }, 1000);
@@ -51,7 +50,7 @@ function playVideo(videoId) {
   var md = document.getElementById('video2')
   if (videoId == 1) { //拒绝Tom
     $('.special').hide();
-    md.onplay = function () {
+    md.oncanplaythrough = function () {
       setTimeout(() => {
         $(".two").hide(); //第二屏隐藏
       }, 1000);
@@ -71,7 +70,7 @@ function playVideo(videoId) {
   }
   if (videoId == 2) {
     $('.special').hide();
-    md.onplay = function () {
+    md.oncanplaythrough = function () {
       setTimeout(() => {
         $(".two").hide(); //第二屏隐藏
       }, 1000);
@@ -92,7 +91,7 @@ function playVideo(videoId) {
     })
   }
   if (videoId == 3) { //飞身上台拥吻
-    md.onplay = function () {
+    md.oncanplaythrough = function () {
       setTimeout(() => {
         $(".four").hide(); //第四屏隐藏
       }, 1000);
@@ -119,7 +118,7 @@ function playVideo(videoId) {
     })
   }
   if (videoId == 4) { //原地不动，送上祝福
-    md.onplay = function () {
+    md.oncanplaythrough = function () {
       setTimeout(() => {
         $(".four").hide(); //第四屏隐藏
       }, 1000);
